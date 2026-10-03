@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "codex": {
+      "type": "stdio",
+      "command": "/home/hrm/anaconda3/envs/Deep-MIST/bin/python",
+      "args": [
+        "/data2/hrm/aris_repo/mcp-servers/codex-exec/server.py"
+      ],
+      "env": {}
+    }
+  }
+}

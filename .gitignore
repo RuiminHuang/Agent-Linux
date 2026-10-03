@@ -1,0 +1,56 @@
+# ── 机器本地工具链（可由 install_aris.sh 重建）──────────────
+.claude/
+.aris/
+
+# ── 参考资料：纯本地，不入库 ──────────────────────────────
+Materials/
+
+# ── LaTeX 编译中间产物 ───────────────────────────────────
+# 注意：*.bbl 故意不在此列——IEEE/arXiv 投稿要求随稿提交 .bbl
+*.aux
+*.log
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+*.brf
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# 编译出的稿件 PDF（图片类 PDF/JPG/PNG 不受影响，仍然跟踪）
+Manuscripts/**/main.pdf
+
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ── 实验大文件：权重与二进制产物不入库 ─────────────────────
+# 文本日志仍然跟踪（CLAUDE.md 定义 Experiments/ 存放 "code and logs"）
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.npz
+Experiments/**/wandb/
+Experiments/**/checkpoints/
+
+# ── 系统垃圾文件 ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*~
+*.swp
