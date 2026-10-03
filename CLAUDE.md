@@ -7,6 +7,19 @@ Do not modify or delete files inside any skill that is a symlink (symlinks point
 Update with: `bash /data2/hrm/aris_repo/tools/install_aris.sh`  (re-runnable; reconciles new/removed skills).
 <!-- ARIS:END -->
 
+## ARIS Upstream Version
+The ARIS symlinks (`.claude/skills/*`, `.aris/tools`, `.github/agents/*.agent.md`) are committed as link paths only — GitHub holds none of their content, so a fresh clone has dangling links until `/data2/hrm/aris_repo` is restored at this commit:
+
+- Upstream: `https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep`
+- Commit: `b8a50974eae105a5d13b75099a6a956a05377e03` (committed 2026-09-11)
+
+```bash
+git clone https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git /data2/hrm/aris_repo
+git -C /data2/hrm/aris_repo checkout b8a50974eae105a5d13b75099a6a956a05377e03
+```
+
+Nothing enforces this pin — the links follow whatever `/data2/hrm/aris_repo` has checked out, so a `git pull` there changes the skills immediately. After updating ARIS, replace the commit above with the output of `git -C /data2/hrm/aris_repo rev-parse HEAD`.
+
 ## Local Server
 - gpu: local
 - GPU: 4x RTX 4090 (24GB)
