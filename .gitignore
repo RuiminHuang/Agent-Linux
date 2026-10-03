@@ -28,6 +28,9 @@ Materials/*
 # 编译出的稿件 PDF（图片类 PDF/JPG/PNG 不受影响，仍然跟踪）
 Manuscripts/**/main.pdf
 
+# 例外：主稿 IEEE_Template/ 的编译产物（含 main.pdf）入库，随源码一起同步到 GitHub
+!Manuscripts/IEEE_Template/main.*
+
 # ── Python ──────────────────────────────────────────────
 __pycache__/
 *.py[cod]
